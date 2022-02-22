@@ -18,7 +18,7 @@
 
 실버 : **[1929](https://www.acmicpc.net/problem/1929) [2775](https://www.acmicpc.net/problem/2775)**  **[2941](https://www.acmicpc.net/problem/2941)**  **[4673](https://www.acmicpc.net/problem/4673) [1002](https://www.acmicpc.net/problem/1002) [9020](https://www.acmicpc.net/problem/9020) [11729](https://www.acmicpc.net/problem/11729) [2447](https://www.acmicpc.net/problem/2447) [7568](https://www.acmicpc.net/problem/7568) [1018](https://www.acmicpc.net/problem/1018) [1436](https://www.acmicpc.net/problem/1436) [2108](https://www.acmicpc.net/problem/2108)** [10814](https://www.acmicpc.net/problem/10814) [**18870](https://www.acmicpc.net/problem/18870) [15649](https://www.acmicpc.net/problem/15649) [15650](https://www.acmicpc.net/problem/15650) [14888](https://www.acmicpc.net/problem/14888)**
 
-골드 : **[1011](https://www.acmicpc.net/problem/1011) [9663](https://www.acmicpc.net/problem/9663)**
+골드 : **[1011](https://www.acmicpc.net/problem/1011) [9663](https://www.acmicpc.net/problem/9663) [2580](https://www.acmicpc.net/problem/2580)**
 
 ## 프로그래머스
 
