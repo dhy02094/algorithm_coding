@@ -16,13 +16,19 @@
 
 브론즈 : **[2839](https://www.acmicpc.net/problem/2839) [8958](https://www.acmicpc.net/problem/8958) [2577](https://www.acmicpc.net/problem/2577) [3052](https://www.acmicpc.net/problem/3052) [1110](https://www.acmicpc.net/problem/1110) [2231](https://www.acmicpc.net/problem/2231)**
 
-실버 : **[1929](https://www.acmicpc.net/problem/1929) [2775](https://www.acmicpc.net/problem/2775)**  **[2941](https://www.acmicpc.net/problem/2941)**  **[4673](https://www.acmicpc.net/problem/4673) [1002](https://www.acmicpc.net/problem/1002) [9020](https://www.acmicpc.net/problem/9020) [11729](https://www.acmicpc.net/problem/11729) [2447](https://www.acmicpc.net/problem/2447) [7568](https://www.acmicpc.net/problem/7568) [1018](https://www.acmicpc.net/problem/1018) [1436](https://www.acmicpc.net/problem/1436) [2108](https://www.acmicpc.net/problem/2108)** [10814](https://www.acmicpc.net/problem/10814) [**18870](https://www.acmicpc.net/problem/18870) [15649](https://www.acmicpc.net/problem/15649) [15650](https://www.acmicpc.net/problem/15650) [14888](https://www.acmicpc.net/problem/14888) [9184](https://www.acmicpc.net/problem/9184) [1189](https://www.acmicpc.net/problem/1149) [10844](https://www.acmicpc.net/problem/10844) [2156](https://www.acmicpc.net/problem/2156)**
+실버 : **[1929](https://www.acmicpc.net/problem/1929) [2775](https://www.acmicpc.net/problem/2775)**  **[2941](https://www.acmicpc.net/problem/2941)**  **[4673](https://www.acmicpc.net/problem/4673) [1002](https://www.acmicpc.net/problem/1002) [9020](https://www.acmicpc.net/problem/9020) [11729](https://www.acmicpc.net/problem/11729) [2447](https://www.acmicpc.net/problem/2447) [7568](https://www.acmicpc.net/problem/7568) [1018](https://www.acmicpc.net/problem/1018) [1436](https://www.acmicpc.net/problem/1436) [2108](https://www.acmicpc.net/problem/2108)** [10814](https://www.acmicpc.net/problem/10814) [**18870](https://www.acmicpc.net/problem/18870) [15649](https://www.acmicpc.net/problem/15649) [15650](https://www.acmicpc.net/problem/15650) [14888](https://www.acmicpc.net/problem/14888) [9184](https://www.acmicpc.net/problem/9184) [1189](https://www.acmicpc.net/problem/1149) [10844](https://www.acmicpc.net/problem/10844) [2156](https://www.acmicpc.net/problem/2156) [11053](https://www.acmicpc.net/problem/11053)**
 
-골드 : **[1011](https://www.acmicpc.net/problem/1011) [9663](https://www.acmicpc.net/problem/9663) [2580](https://www.acmicpc.net/problem/2580)**
+골드 : **[1011](https://www.acmicpc.net/problem/1011) [9663](https://www.acmicpc.net/problem/9663) [2580](https://www.acmicpc.net/problem/2580) [11054](https://www.acmicpc.net/problem/11054) [2565](https://www.acmicpc.net/problem/2565) [9251](https://www.acmicpc.net/problem/9251)**
 
 ## 프로그래머스
 
-[실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) [최고의 집합](https://programmers.co.kr/learn/courses/30/lessons/12938)
+[실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) [최고의 집합](https://programmers.co.kr/learn/courses/30/lessons/12938) [완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576?language=python3) 
+
+Lv1 [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840)
+
+Lv2 [소수찾기](https://programmers.co.kr/learn/courses/30/lessons/42840) [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842) [위장](https://programmers.co.kr/learn/courses/30/lessons/42578) [기능개발](https://programmers.co.kr/learn/courses/30/lessons/42586) [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) 다리를 지나는 트럭
+
+Lv3
 
 # 2. 알고리즘
 
@@ -52,4 +58,39 @@ print(cnt)
 
 #[(3,5),(2,2)] 
 이렇게 개수를 세준다.
+```
+
+LIS
+
+```python
+# 10 20 10 30 20 50 에서 LIS 정렬을 하고 길이를 출력하라.
+
+a = int(input())
+b = list(map(int, input().split()))
+
+c = [1] * a
+
+for i in range(a):                    # 10
+    for j in range(i):
+        if b[j] < b[i] :              
+            c[i] = max(c[i], c[j]+1) 
+print(max(c))
+```
+
+완전순열
+
+- 4명이 앉아 있을 때 자기가 앉은 자리는 다시 앉지 않는 조합의 수
+
+$$
+D_n = (n-1)(D_{n-1} +D_{n-2})
+$$
+
+```python
+n = int(input())
+dp = [0]*(n+1)
+dp[2] = 1
+for i in range(3,n+1):
+    dp[i] = (i-1)*(dp[i-1]+dp[i-2])
+answer = dp[n]
+print(answer)
 ```
